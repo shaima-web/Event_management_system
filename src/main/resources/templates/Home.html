@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Event Mania Home Page</title>
+<link rel="stylesheet" th:href="@{/main.css}"/>
+</head>
+<body>
+	<section>
+		<div class="leftBox">
+			<div class="content">
+				<h1>WELCOME TO <br>
+				<span>EVENT MANIA</span></h1>
+			</div>
+		</div>
+		<div class="events">
+			<ul>
+				<li>
+					<div class="time">
+						<h2>
+							Event <br>
+							<span>Creation</span>
+						</h2>
+					</div>
+					<div class="details">
+						<p>Lets you create events. Here you will create an event and invite people on the guest list. If you want to invite someone who is not
+						on the guest list you have the option to add someone on the guest list and then invite them.</p>
+						<a th:href="@{/events/new}">Create an event</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+				<li>
+					<div class="time">
+						<h2>
+							<br>
+							<span>Upcoming Events</span>
+						</h2>
+					</div>
+					<div class="details">
+						<p>Here you have a list of all the upcoming events.</p>
+						 <a th:href="@{/events}">Display events</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+				<li>
+					<div class="time">
+						<h2>
+							Guests <br>
+							<span>Details</span>
+						</h2>
+					</div>
+					<div class="details">
+						<p>View the guest list and invite guests or add a guest on the guest list</p>
+						<a th:href="@{/guests}">View guest list</a>
+					    <a th:href="@{/guests/new}">Add a guest</a>
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+</html>

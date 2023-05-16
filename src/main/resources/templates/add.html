@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/crevent.css}"/>
+<title>Adding user guests</title>
+</head>
+<body>
+
+	<div class="formbold-main-wrapper">
+		<!-- Author: FormBold Team -->
+		<!-- Learn More: https://formbold.com -->
+		<div class="formbold-form-wrapper">
+			<form th:action="@{/guests}" th:object="${guest}" method="POST">
+				<div class="formbold-mb-5">
+					<label for="name" class="formbold-form-label">Guest Name
+					</label> <input type="text" name="name" th:field="*{guestname}" id="name"
+						class="formbold-form-input" />
+				</div>
+				<div class="formbold-mb-5">
+					<label for="descr" class="formbold-form-label">Email
+					</label> <input type="text" name="email" th:field="*{email}" id="email"
+						class="formbold-form-input" />
+				</div>
+				<div>
+					<button type="submit" class="formbold-btn">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
